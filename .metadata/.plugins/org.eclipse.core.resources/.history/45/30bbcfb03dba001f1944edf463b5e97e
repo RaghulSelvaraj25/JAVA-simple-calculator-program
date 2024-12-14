@@ -1,0 +1,47 @@
+package project.calculator;
+
+import java.util.Scanner;
+
+public class simplecalc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Simple Calculator");
+		System.out.println("Choose an operation:");
+		System.out.println("1.Addition(+)");
+		System.out.println("2.Subtraction(-)");
+		System.out.println("3.Multiplication(*)");
+		System.out.println("4.Division(/)");
+		System.out.print("Enter your choice(1-4):");
+		int choice = scanner.nextInt();
+		System.out.println("Enter your first number:");
+		double number1 = scanner.nextDouble();
+		System.out.println("Enter your second number:");
+		double number2 = scanner.nextDouble();
+		switch (choice) {
+		case 1:
+			System.out.println("Result:" + (number1 + number2));
+			break;
+		case 2:
+			System.out.println("Result:" + (number1 - number2));
+			break;
+		case 3:
+			System.out.println("Result:" + (number1 * number2));
+			break;
+		case 4:
+			if (number2 != 0) {
+				System.out.println("Result:" + (number1 / number2));
+			} else {
+				System.out.println("Error: Division by zero is not allowed");
+			}
+			break;
+		default:
+			System.out.println("Invalid choice.Please select a valid operation(1-4).");
+
+		}
+		scanner.close();
+
+	}
+
+}
